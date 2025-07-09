@@ -2,6 +2,8 @@ import numpy as np
 import torch
 from torch_geometric.data import Data
 from torch_geometric.utils import k_hop_subgraph
+import yaml
+from yaml import SafeLoader
 
 
 def filter_edge_index(edge_index, node_indices, reindex=True):
@@ -89,3 +91,12 @@ def update_edge_index_unlearn(args, edge_index, delete_nodes, delete_edge_index=
     remain_indices = np.union1d(remain_indices, remain_indices_not)
 
     return torch.from_numpy(edge_index[:, remain_indices])
+
+
+def get_parameter(args):
+    config = yaml.load(open(args['para_config']), Loader=SafeLoader)
+    args['lr'] = float(config[args['target_model']][args['dataset']]['lr'])
+    args['wd'] = float(config[args['target_model']][args['dataset']]['wd'])
+    args['erase_ratio'] = float(config[args['target_model']][args['dataset']]['erase_ratio'])
+    args['l'] = float(config[args['target_model']][args['dataset']]['l'])
+    return args
