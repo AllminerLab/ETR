@@ -2,6 +2,12 @@
 
 This is an official implementation of AAAI 25 paper Erase then Rectify: A Training-Free Parameter Editing Approach for Cost-Effective Graph Unlearning.
 
+## 📰 News
+
+ 1. **2024-12**
+🎉 Our paper *"Erase then Rectify: A Training-Free Parameter Editing Approach for Cost-Effective Graph Unlearning"* has been accepted to the **AAAI 2025**!
+📄 [Read the paper on arXiv](https://arxiv.org/pdf/2409.16684)
+
 ## Requirements
 ```
 python==3.11.5
