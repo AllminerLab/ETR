@@ -2,7 +2,7 @@
 
 This is an official implementation of AAAI 25 paper Erase then Rectify: A Training-Free Parameter Editing Approach for Cost-Effective Graph Unlearning.
 
-## 📰 News
+## 📰 Update
 
  1. **2025-07**
     🛠️ We have released an updated version with detailed hyperparameter selection.
